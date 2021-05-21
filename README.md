@@ -3,7 +3,7 @@ This is an online Kenyan primary school management system developed in native PH
 
 ![Admin dashboard](https://github.com/ObedNyakundi/online-school-management-system-in-native-PHP/blob/main/01.png)
 
-# online-hotel-restaurant-management-system-in-PHP
+# online-school-management-system-in-PHP
 This is an incomplete online primary school management software for a Kenyan school developed in HTML & CSS, JS, and PHP as developed by Obed Nyakundi.
 The software package includes:
 - a database for the school.
