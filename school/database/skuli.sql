@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 20, 2020 at 06:33 AM
--- Server version: 10.1.22-MariaDB
--- PHP Version: 7.1.4
+-- Generation Time: Dec 02, 2022 at 07:55 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -100,7 +100,13 @@ INSERT INTO `exam` (`id`, `name`, `maths`, `english`, `kiswahili`, `science`, `s
 (3, 'Kitunguu Saumu', 77, 67, 71, 89, 54, 358, 71.6, 'opening Term 1 2019', 'MSA134'),
 (5, 'Example Three', 56, 67, 66, 89, 56, 334, 66.8, 'Final Term 1 2018', '123sd'),
 (6, 'Mwenyekiti Omondi', 87, 77, 67, 43, 43, 317, 63.4, 'Final Term 1 2018', '3456'),
-(7, 'Godfrey Ochieng', 34, 54, 45, 78, 90, 301, 60.2, 'Opening Term 1 2019', 'MSA889');
+(7, 'Godfrey Ochieng', 34, 54, 45, 78, 90, 301, 60.2, 'Opening Term 1 2019', 'MSA889'),
+(9, 'Athuman Hassan', 78, 22, 55, 46, 34, 235, 47, 'Opening Term 1 2021', 'MSA123'),
+(10, 'Anita David', 68, 95, 98, 65, 78, 404, 80.8, 'Opening Term 1 2021', 'MSA234'),
+(11, 'Godfrey Ochieng', 56, 98, 55, 44, 45, 298, 59.6, 'Opening Term 1 2021', 'MSA889'),
+(13, 'Example Three', 45, 89, 33, 36, 98, 301, 60.2, 'Opening Term 1 2021', '123sd'),
+(14, 'Mwenyekiti Omondi One', 78, 88, 45, 77, 22, 310, 62, 'Opening Term 1 2021', '3456'),
+(15, 'Ann Kea', 77, 77, 74, 55, 44, 327, 65.4, 'Opening Term 1 2021', 'MSA324');
 
 -- --------------------------------------------------------
 
@@ -126,7 +132,8 @@ INSERT INTO `students` (`name`, `dateOfBirth`, `upi`, `class`) VALUES
 ('Athuman Hassan', '2010-11-09', 'MSA123', 'Nursery'),
 ('Anita David', '2018-09-02', 'MSA234', 'Nursery'),
 ('Ann Kea', '2018-12-04', 'MSA324', '1 blue'),
-('Godfrey Ochieng', '2018-12-30', 'MSA889', 'Nursery');
+('Godfrey Ochieng', '2018-12-30', 'MSA889', 'Nursery'),
+('Alfred Koech', '2011-04-11', 'WE455', '2 red');
 
 --
 -- Triggers `students`
@@ -181,10 +188,7 @@ CREATE TABLE `teacher` (
 
 INSERT INTO `teacher` (`name`, `tscNum`, `dateOfBirth`, `dateOfAppointment`, `currentWorkingStation`, `type`, `password`) VALUES
 ('Ace Nyakundi', 1233, '1995-01-01', '2018-12-12', 'Longo Sec', 'teacher', 'mimi'),
-('Obed Nyakundi', 1234, '2018-12-02', '2018-12-19', 'Longo Primary', 'HTeacher', 'mimi'),
-('Mwenye Kiti', 3254, '2018-11-26', '2018-12-18', 'Ukunda Central', 'teacher', 'sisi'),
-('Example teacher', 4321, '2018-12-01', '2018-12-18', 'Ukunda', 'teacher', 'mimi'),
-('Peter Mangi', 4521, '2018-12-11', '2018-12-14', 'mkumbi', 'teacher', 'caleb12');
+('Obed Nyakundi', 1234, '2018-12-02', '2018-12-19', 'Longo Primary', 'HTeacher', 'mimi');
 
 -- --------------------------------------------------------
 
@@ -261,26 +265,31 @@ ALTER TABLE `tests`
 --
 ALTER TABLE `books`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `class`
 --
 ALTER TABLE `class`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `exam`
 --
 ALTER TABLE `exam`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
 --
 -- AUTO_INCREMENT for table `subject`
 --
 ALTER TABLE `subject`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `tests`
 --
 ALTER TABLE `tests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
