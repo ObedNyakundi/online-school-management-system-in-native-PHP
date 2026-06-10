@@ -2,7 +2,9 @@
 	require "connection.php";
 
 	//this page should never be loaded directly. it is used by ajax for live searching by members, admins, trainers anyone according to how i have defined him/her.
-
+	if (!is_logged_in()) {
+		die("Access denied"); //deny access to uses that are not logged in.
+	}
 	
 	if (isset($_GET["act"])) {
 
